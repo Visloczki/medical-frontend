@@ -14,5 +14,5 @@ const OurDepartment = () => {
     </div>
   )
 }
-
+ 
 export default OurDepartment
