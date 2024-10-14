@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 
 import { motion } from "framer-motion"
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface CardsProps {
   badge?: string;
@@ -33,7 +34,8 @@ const Cards = ({ badge, onClick, image, description, fromPrice, price, readMoreL
       }}
       className='flex flex-col w-full max-w-[328px] justify-center items-center bg-white drop-shadow-lg rounded-lg'>
 
-      <div className={cn(`bg-[url('/assets/${image}.png')] relative w-full h-[300px] bg-no-repeat bg-cover rounded-t-lg`)}>
+      <div className={cn(`relative w-full h-[300px] bg-no-repeat bg-cover rounded-t-lg`)}>
+        <Image width={750} height={800} alt={image} src={`/assets/${image}.png`}  className='h-full'/>
         <div className='absolute top-4 left-4'>
           {badge ? (
             <Badge >
